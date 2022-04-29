@@ -25,11 +25,26 @@ git init
 
 git branch -M main
 
+git push origin main
+
   "scripts": {
     "start": "nodemon ./index.js localhost 3000"
   }
 
 create index.js and import dependencies
 
-    const express = require('express')
-    const app = express()# api-node-mongodb
+  const express = require('express')
+  const app = express()
+  const mongoose = require('mongoose')
+
+
+
+#database acess:
+
+guilhermemm-dev
+gmmdev123
+
+mongodb+srv://guilhermemm-dev:<password>@api-cluster.3ghz3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+
+PS: ter cuidado com informações sensisveis, para nao ficarem publicas no github
