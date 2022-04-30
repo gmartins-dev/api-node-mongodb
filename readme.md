@@ -47,4 +47,16 @@ gmmdev123
 mongodb+srv://guilhermemm-dev:<password>@api-cluster.3ghz3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 
-PS: ter cuidado com informações sensisveis, para nao ficarem publicas no github
+
+
+
+
+
+
+
+
+#POSSIVEIS MELHORIAS:
+
+-PS: ter cuidado com informações sensisveis, para nao ficarem publicas no github
+-converter o ID enviado pelo db para algo mais "legivel" 
+
