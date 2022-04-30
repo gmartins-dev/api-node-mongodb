@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-
+require('dotenv').config()
 
 //JSON reader - middleware
 app.use(
@@ -29,8 +29,8 @@ app.get('/', (req, res) => {
 
 //ports
 
-const DB_USER = 'guilhermemm-dev'
-const DB_PASSWORD = encodeURIComponent('gmmdev123')
+const DB_USER = process.env.DB_USER
+const DB_PASSWORD = (process.env.DB_PASSWORD)
 
 mongoose.connect(
     `mongodb+srv://${DB_USER}:${DB_PASSWORD}@api-cluster.3ghz3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`

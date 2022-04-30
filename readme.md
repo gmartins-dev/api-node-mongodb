@@ -1,19 +1,17 @@
-CRUD - API padrão RESTful
+#CRUD - API padrão RESTful
 
 
-API baseada no framework Express
--tratamento de requisições e enviar respostas aos endpoints
+Express --> tratamento de requisições e enviar respostas aos endpoints
 
+-MongoDB --> ODM Mongoose
 
-MongoDB --> ODM Mongoose
+-MongoDB Atlas --> cloud service deploy
 
-MongoDB Atlas --> cloud service deploy
+-Nodemon --> real time app on dev ambient
 
-Nodemon --> real time app no ambiente de dev
+-Postman -> for API requisions and responses tests
 
-Postman -> sera usado para testar a API
-
-Dotenv -> security
+-Dotenv -> security, using local variables to not export sensitive application data
 
 =========================================
 
@@ -40,25 +38,12 @@ create index.js and import dependencies
   const mongoose = require('mongoose')
 
 
-
 #database acess:
 
-guilhermemm-dev
-gmmdev123
-
-mongodb+srv://guilhermemm-dev:<password>@api-cluster.3ghz3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-
-
-
-
-
-
-
+.env local variables
 
 
 
 #POSSIVEIS MELHORIAS:
 
--PS: ter cuidado com informações sensisveis, para nao ficarem publicas no github
 -converter o ID enviado pelo db para algo mais "legivel" 
-
