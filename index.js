@@ -13,6 +13,45 @@ app.use(
 
 app.use(express.json())
 
+
+//API routes
+
+app.post('/person', async (req, res) => {
+
+    const {name, salary, approved} = req.body
+
+    //check req/validation
+    if(!name && !salary && !approved) {
+        res.status(422).json({error: 'All infos is required!'})
+    } 
+    if(!name) {
+        res.status(422).json({error: 'Name info is required!'})
+    }
+    if(!salary) {
+        res.status(422).json({error: 'Salary info is required!'})
+    }
+    if(typeof approved != 'boolean') {
+        res.status(422).json({error: 'Approved status info is required!'})
+    }
+
+    const person = {
+        name,
+        salary,
+        approved
+    }
+
+    try {
+        //creating data
+        await Person.create(person)
+        res.status(201).json({message: 'Person insert with sucess!'})
+    } catch (error) {
+        res.status(500).json({error: error})
+    }
+
+})
+
+
+
 //root / endpoint
 app.get('/', (req, res) => {
 
