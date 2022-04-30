@@ -31,9 +31,10 @@ app.get('/', (req, res) => {
 
 const DB_USER = process.env.DB_USER
 const DB_PASSWORD = (process.env.DB_PASSWORD)
+const DB_ATLAS = process.env.DB_ATLAS
 
 mongoose.connect(
-    `mongodb+srv://${DB_USER}:${DB_PASSWORD}@api-cluster.3ghz3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+    `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_ATLAS}`
 )
     .then( () => {
         console.log("MongoDB Connected!")
