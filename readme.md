@@ -13,6 +13,8 @@ Nodemon --> real time app no ambiente de dev
 
 Postman -> sera usado para testar a API
 
+Dotenv -> security
+
 =========================================
 
 Iniciando o projeto:
